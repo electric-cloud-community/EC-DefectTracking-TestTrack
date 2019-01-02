@@ -1,0 +1,43 @@
+<?xml version='1.0' standalone='yes'?>
+<fileset>
+  <file>
+    <path>TestTrackCfg.pm</path>
+    <xpath>//property[propertyName=&quot;ECDefectTracking::TestTrack::Cfg&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>TestTrackDriver.pm</path>
+    <xpath>//property[propertyName=&quot;ECDefectTracking::TestTrack::Driver&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>testtrackCreateConfigForm.xml</path>
+    <xpath>//property[propertyName=&quot;createConfig&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>testtrackEditConfigForm.xml</path>
+    <xpath>//property[propertyName=&quot;editConfig&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>ec_setup.pl</path>
+    <xpath>//property[propertyName=&quot;ec_setup&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>ec_parameterForm-LinkDefects.xml</path>
+    <xpath>//procedure[procedureName=&quot;LinkDefects&quot;]/propertySheet/property[propertyName=&quot;ec_parameterForm&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>ec_parameterForm-UpdateDefects.xml</path>
+    <xpath>//procedure[procedureName=&quot;UpdateDefects&quot;]/propertySheet/property[propertyName=&quot;ec_parameterForm&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>ec_parameterForm-CreateDefects.xml</path>
+    <xpath>//procedure[procedureName=&quot;CreateDefects&quot;]/propertySheet/property[propertyName=&quot;ec_parameterForm&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>ec_parameterForm-FileDefect.xml</path>
+    <xpath>//procedure[procedureName=&quot;FileDefect&quot;]/propertySheet/property[propertyName=&quot;ec_parameterForm&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>ec_parameterForm-FileDefectProcedure.xml</path>
+    <xpath>//procedure[procedureName=&quot;FileDefectProcedure&quot;]/propertySheet/property[propertyName=&quot;ec_parameterForm&quot;]/value</xpath>
+  </file>
+</fileset>
