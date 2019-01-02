@@ -1,0 +1,7 @@
+<configDefinition>
+  <title>TestTrack Report</title>
+  <helpLink>/link/showHelp?page=testtrackhelp</helpLink>     
+    <componentContainer>
+         <component plugin="@PLUGIN_KEY@" version="@PLUGIN_VERSION@" ref="Reports" />
+    </componentContainer>  
+</configDefinition>

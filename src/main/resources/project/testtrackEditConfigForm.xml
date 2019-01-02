@@ -1,0 +1,43 @@
+<editor>
+    <formElement>
+        <type>textarea</type>
+        <label>Description:</label>
+        <property>description</property>
+        <documentation>A description of this configuration.</documentation>
+    </formElement>
+    <formElement>
+        <type>credential</type>
+        <label>Login As:</label>
+        <property>credential</property>
+        <required>1</required>
+        <documentation>The user name and password to use to connect to the specified TestTrack URL.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>URL:</label>
+        <property>url</property>
+        <required>1</required>
+        <documentation>The URL to use to connect to a TestTrack server.  For example: http://10.10.10.10:8080 or http://yourTestTrackserver</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Project:</label>
+        <property>project</property>
+        <required>1</required>
+	<documentation>A unique project for this configuration.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Defect type:</label>
+        <property>type</property>
+        <required>1</required>
+	<documentation>A type for the commited defects in this configuration.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Commit User:</label>
+        <property>enteruser</property>
+        <required>1</required>
+	<documentation>A unique user commiting defects in this configuration.</documentation>
+    </formElement>
+</editor>

@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator"
+          content="HTML Tidy for Windows (vers 14 February 2006), see www.w3.org" />
+    <meta content="text/html; charset=us-ascii"
+          http-equiv="content-type" />
+
+    <title>ElectricFlow Plugin for TestTrack</title>
+    <link rel="stylesheet"
+          href="../../plugins/@PLUGIN_KEY@/pluginhelp.css"
+          type="text/css"
+          media="screen" />
+</head>
+
+<body>
+    <div class="help">
+        <h1>TestTrack</h1>
+
+        <p>Plugin Version @PLUGIN_VERSION@</p>
+        <hr style="margin-left: -10px; margin-top: 10px; height: 1px; width: 100%; color: #5981BD;"
+            noshade="noshade" />						<p>Revised on July 1, 2015</p>
+        <!-- The tool description should answer these kinds of questions:
+                                                                                                What is the tool itself is used for in the development
+                                                                                                process? Who would use this tool? What is the general use-case or
+                                                                                                problem that this tool solves? Look at the tool's documentation or
+                                                                                                website(s) to get their own descriptions. Look at Wikipedia or other
+                                                                                                outside websites. If there is a Hudson plugin, read their 
+                                                                                                documentation for ideas, examples, etc. It's OK to copy word-for-word
+                                                                                                only if appropriate, such as FOSS - but not commercial software.
+                                                                                                -->
+
+        <p>TestTrack is the a tool suite to manage all application
+        development phases and artifacts. From requirements, user
+        stories and release planning, through sprints, assignments
+        and work items, to test cases, QA cycles, defect
+        resolutions and releases, TestTrack helps you deliver
+        quality products on time.</p>
+
+        <h2>TestTrack Links</h2>
+
+        <p><a href="http://www.seapine.com/">Seapine TestTrack Home
+        Page</a>.</p>
+
+        <h2>ElectricFlow Integration to TestTrack</h2>
+        <!-- The integration description should answer the questions:
+                                                                                                How deep does our integration go? Why should I care? What general
+                                                                                                functionality does the plugin include? What functionality does
+                                                                                                the plugin omit?
+                                                                                                -->
+
+        <p>The EC-DefectTracking-TestTrack plugin enables you to
+        create, update, and link defects to an ElectricFlow job. It
+        also links a new report that contains information from the
+        TestTrack server about what was linked, updated, or
+        created.</p>
+
+        <h2>Integrated Version</h2>
+
+        <p>This plugin was developed and tested with TestTrack
+        ...</p>
+
+        <h1>Plugin Procedures</h1>
+		<p>IMPORTANT: In the ElectricFlow UI, from the Home page, open the Main Menu, and click <b>Admin</b> > <b>Plugins</b> to open the Plugin Manager.</p>
+        <p>IMPORTANT: For all parameter descriptions below,
+        required parameters are shown in
+        <span class='required'>bold italics</span>.</p>
+
+        <div class="procedure"
+             id="CreateConfiguration">
+            <a name='CreateConfiguration'
+                 id="CreateConfiguration"></a> 
+
+            <h3>Plugin Configuration</h3>
+            <!-- If the plugin has separate configurations then include this section,
+                                                                                                            otherwise omit this whole section. We don't need to have a configuration
+                                                                                                            section that just says "There is no configuration for this plugin."
+                                                                                                            -->
+
+            <p>Plugin configurations are sets of parameters that
+            apply across some or all of the plugin's procedures.
+            They are intended to reduce repetition of common
+            values, create predefined sets of parameters for end
+            users, and to securely store credentials where needed.
+            Each configuration is given a unique name that is
+            entered in designated parameters on procedures that use
+            them.<br />
+             Plugin configurations are created by going to the
+            ElectricFlow "Administration" tab, then to the
+            "Defect Tracking" sub-tab where is the configuration
+            panel.</p>
+
+            <p>To enable ElectricFlow to communicate with your
+            TestTrack system, create a defect tracking
+            configuration, supplying the following
+            information:</p>
+
+            <table class="grid">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td class='required'>Configuration
+                        Name</td>
+
+                        <td>A unique user commiting defects in this
+                        configuration. (Required)</td>
+                    </tr>
+
+                    <tr>
+                        <td>Description</td>
+
+                        <td>A description of this
+                        configuration.</td>
+                    </tr>
+
+                    <tr>
+                        <td class='required'>Login As</td>
+
+                        <td><i>Username</i>: Provide the user name
+                        ElectricFlow uses to communicate with the
+                        TestTrack url. (Required)<br />
+                         <i>Password</i>: Provide the password for
+                        the specified Username. (Required)<br />
+                         <i>Retype Password</i>: Retype the
+                        password specified. (Required)</td>
+                    </tr>
+
+                    <tr>
+                        <td class='required'>URL</td>
+
+                        <td>The URL to use to connect to a
+                        TestTrack server. For example:
+                        'http://10.10.10.10:8080' or
+                        'http://yourTestTrackserver'.
+                        (Required)</td>
+                    </tr>
+
+                    <tr>
+                        <td class='required'>Project</td>
+
+                        <td>A unique project for this
+                        configuration. (Required)</td>
+                    </tr>
+
+                    <tr>
+                        <td class='required'>Defect Type</td>
+
+                        <td>A type for the commited defects in this
+                        configuration. (Required)</td>
+                    </tr>
+
+                    <tr>
+                        <td class='required'>Commit User</td>
+
+                        <td>A unique user commiting defects in this
+                        configuration. (Required</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="procedure"
+             id="CreateDefects">
+            <a name='CreateDefects'
+                 id="CreateDefects"></a> 
+
+            <h3>CreateDefects</h3>
+
+            <p>Create TestTrack defects based on test failures in a
+            job.</p>
+
+            <table class="grid">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class='required'>Configuration
+                        Name</td>
+
+                        <td>Provide the name of your TestTrack
+                        Defect Tracking configuration, or leave it
+                        blank to use the 'default' configuration.
+                        (Required)</td>
+                    </tr>
+
+                    <tr>
+                        <td class='required'>Project Name</td>
+
+                        <td>Provide the name of the TestTrack
+                        project. (Required)</td>
+                    </tr>
+
+                    <tr>
+                        <td>Creation Mode</td>
+
+                        <td>Select Automatic if the defects should
+                        be created during job execution without
+                        user input. Select Manual to require a user
+                        to manually submit a defect from a Defect
+                        Report page linked to a Job Details
+                        page.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="procedure"
+             id="LinkDefects">
+            <a name='LinkDefects'
+                 id="LinkDefects"></a> 
+
+            <h3>LinkDefects</h3>
+
+            <p>Link existing TestTrack defects to a job.</p>
+
+            <table class="grid">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class='required'>Configuration
+                        Name</td>
+
+                        <td>Provide the name of your TestTrack
+                        Defect Tracking configuration.
+                        (Required)</td>
+                    </tr>
+
+                    <tr>
+                        <td>Property To Parse</td>
+
+                        <td>Provide the property or property sheet
+                        used to search for defect IDs. If this
+                        field is blank, the default property
+                        '/myJob/ecscm_changeLogs' is used.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="procedure"
+             id="UpdateDefects">
+            <a name='UpdateDefects'
+                 id="UpdateDefects"></a> 
+
+            <h3>UpdateDefects</h3>
+
+            <p>Automatically update defects in TestTrack.</p>
+
+            <table class="grid">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class='required'>Configuration
+                        Name</td>
+
+                        <td>Provide the name of your TestTrack
+                        Defect Tracking configuration.
+                        (Required)</td>
+                    </tr>
+
+                    <tr>
+                        <td class='required'>Physical location of
+                        the admin script</td>
+
+                        <td>Provide the path to the property, if
+                        the property containing the list of defects
+                        to update is somewhere other than
+                        '/myJob/defectsToUpdate'. (Required)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h1>Release Notes</h1>
+            <h2>@PLUGIN_KEY@-2.0.3</h2>            <ul>                <li>Renamed ElectricCommander to ElectricFlow.</li>            </ul>
+            <h2>@PLUGIN_KEY@-2.0.2</h2>
+
+            <ul>
+                <li>Improve xml parameter panels.</li>
+
+                <li>New help page format.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

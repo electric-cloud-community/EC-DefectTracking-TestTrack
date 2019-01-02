@@ -1,0 +1,26 @@
+<editor>
+	<help>/commander/pages/@PLUGIN_KEY@-@PLUGIN_VERSION@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#FileDefect</help>
+	<formElement>
+		<type>entry</type>
+		<label>config:</label>
+		<property>config</property>
+		<required>1</required>
+		<documentation>...</documentation>
+	</formElement>
+
+	<formElement>
+		<type>entry</type>
+		<label>prop:</label>
+		<property>prop</property>
+		<required>1</required>
+		<documentation>...</documentation>
+	</formElement>
+	
+	<formElement>
+		<type>entry</type>
+		<label>jobIdParam:</label>
+		<property>jobIdParam</property>
+		<required>1</required>
+		<documentation>...</documentation>
+	</formElement>
+</editor>

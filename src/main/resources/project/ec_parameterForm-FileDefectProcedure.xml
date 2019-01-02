@@ -1,0 +1,16 @@
+<editor>
+	<help>/commander/pages/@PLUGIN_KEY@-@PLUGIN_VERSION@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#FileDefectProcedure</help>
+	<formElement>
+		<type>entry</type>
+		<label>propProc:</label>
+		<property>propProc</property>
+		<required>1</required>
+		<documentation>...</documentation>
+	</formElement>
+	<formElement>
+		<type>entry</type>
+		<label>jobIdParamProc:</label>
+		<property>jobIdParamProc</property>
+		<documentation>...</documentation>
+	</formElement>		
+</editor>
